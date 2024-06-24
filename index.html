@@ -1,0 +1,919 @@
+<!DOCTYPE html><html><head><title>Fallen : RERUN</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1"><meta charset="UTF-8"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="description" content=""><link rel="manifest" href="manifest.json"><link rel="icon" type="image/png" href="icon64.png"><link rel="apple-touch-icon" sizes="180x180" href="icon180.png"><link rel="icon" type="image/png" sizes="32x32" href="icon32.png"><link rel="icon" type="image/png" sizes="16x16" href="icon16.png"><style>html,body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow:hidden;
+  font-family: Verdana;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#canvaswrapper {
+  text-align: center ;
+}
+</style><style>@font-face { font-family: "BitCell" ; src: url("fonts/BitCell.ttf") format("truetype"); }</style><script>window.fonts = ["BitCell"]</script></head><body class="noselect custom-cursor" oncontextmenu="return false;"><div id="canvaswrapper"></div><script type="text/javascript">var resources = {"images":[{"file":"icon.png","version":61,"size":485,"properties":{"frames":1,"fps":5}},{"file":"objects-coin.png","version":54,"size":266,"properties":{"frames":1,"fps":5}},{"file":"objects-portal.png","version":25,"size":255,"properties":{"frames":1,"fps":5}},{"file":"objects-smoklet.png","version":12,"size":221,"properties":{"frames":1,"fps":5}},{"file":"objects-spawnpoint.png","version":23,"size":272,"properties":{"frames":1,"fps":5}},{"file":"player-player_double_jump.png","version":64,"size":763,"properties":{"frames":4,"fps":10}},{"file":"player-player_idle.png","version":69,"size":482,"properties":{"frames":2,"fps":2}},{"file":"player-player_jump.png","version":75,"size":898,"properties":{"frames":5,"fps":3}},{"file":"player-player_run.png","version":61,"size":494,"properties":{"frames":2,"fps":7}},{"file":"poster.png","version":68,"size":613,"properties":{"frames":1,"fps":5}},{"file":"sprite.png","version":29,"size":316,"properties":{"frames":1,"fps":5}},{"file":"sprite2.png","version":3,"size":179,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_cloud.png","version":27,"size":194,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_cloud_corner.png","version":9,"size":173,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_crate.png","version":18,"size":256,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_crate1.png","version":11,"size":251,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_crate2.png","version":17,"size":260,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_dirt.png","version":8,"size":252,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_falling.png","version":22,"size":278,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_grass.png","version":46,"size":231,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_grass_stone.png","version":12,"size":243,"properties":{"frames":1,"fps":5}},{"file":"tiles-tile_stone.png","version":65,"size":219,"properties":{"frames":1,"fps":5}}],"assets":[],"maps":{"bg":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_cloud\",\"tiles-tile_cloud_corner\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,2,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map1":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_grass\",\"tiles-tile_stone\",\"objects-spawnpoint\",\"objects-portal\",\"objects-coin\"],\"data\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map10":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_dirt\",\"tiles-tile_grass\",\"objects-spawnpoint\",\"tiles-tile_falling\",\"objects-coin\",\"objects-portal\"],\"data\":[1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,2,1,0,1,1,1,0,0,0,0,0,2,1,1,1,1,1,0,0,0,0,0,0,0,0,2,2,1,1,1,0,0,0,0,0,0,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,6,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map11":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_dirt\",\"tiles-tile_grass\",\"tiles-tile_crate2\",\"objects-portal\",\"tiles-tile_falling\",\"objects-coin\",\"objects-spawnpoint\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,2,1,1,1,2,2,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,0,2,1,1,0,0,0,0,0,0,0,0,0,0,3,3,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,3,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,1,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0]}","map12":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_dirt\",\"tiles-tile_grass\",\"objects-spawnpoint\",\"tiles-tile_crate1\",\"tiles-tile_crate2\",\"objects-coin\",\"tiles-tile_falling\",\"sprite2\",\"sprite\",\"objects-portal\"],\"data\":[1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,2,2,2,2,0,0,0,2,2,2,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,8,8,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,10,0,0,0,0,0,0,1,1,1,2,2,0,0,0,7,7,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,8,8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map2":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_stone\",\"objects-spawnpoint\",\"tiles-tile_crate\",\"objects-coin\",\"objects-portal\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,1,1,1,0,3,0,0,0,0,0,0,0,0,0,0,0,0,3,0,4,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map3":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_dirt\",\"tiles-tile_grass\",\"objects-spawnpoint\",\"objects-coin\",\"tiles-tile_crate2\",\"tiles-tile_crate1\",\"objects-portal\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,2,2,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,6,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,2,1,2,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map4":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_stone\",\"tiles-tile_grass_stone\",\"objects-spawnpoint\",\"tiles-tile_crate1\",\"objects-coin\",\"objects-portal\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map5":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_stone\",\"tiles-tile_grass_stone\",\"objects-portal\",\"objects-coin\",\"objects-spawnpoint\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,2,2,0,0,0,0,0,0,2,2,2,2,0,0,0,1,1,1,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,2,2,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,2,2,2,0,0,4,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map6":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_stone\",\"tiles-tile_grass_stone\",\"tiles-tile_crate2\",\"tiles-tile_crate1\",\"objects-spawnpoint\",\"objects-coin\",\"objects-portal\"],\"data\":[0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,3,4,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,6,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0]}","map7":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_stone\",\"tiles-tile_grass_stone\",\"objects-spawnpoint\",\"tiles-tile_crate1\",\"tiles-tile_crate2\",\"objects-coin\",\"tiles-tile_dirt\",\"tiles-tile_grass\",\"objects-portal\"],\"data\":[0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,2,0,0,0,0,3,0,4,4,0,0,0,0,0,0,0,0,0,0,4,5,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,1,1,1,1,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,7,7,7,7,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,8,8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map8":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_dirt\",\"tiles-tile_grass\",\"objects-spawnpoint\",\"objects-coin\",\"tiles-tile_falling\",\"objects-portal\"],\"data\":[1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}","map9":"{\"width\":24,\"height\":16,\"block_width\":8,\"block_height\":8,\"sprites\":[0,\"tiles-tile_dirt\",\"tiles-tile_grass\",\"tiles-tile_falling\",\"objects-spawnpoint\",\"tiles-tile_grass_stone\",\"objects-coin\",\"objects-portal\"],\"data\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,6,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1,2,2,0,0,0,0,0,0,0,0,0,0,2,2,2,2,0,0,0,0,0,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}"},"sounds":[{"file":"jump.wav","version":1,"size":27798,"properties":{}},{"file":"new_level.wav","version":1,"size":28993,"properties":{}},{"file":"pickup.wav","version":1,"size":30322,"properties":{}},{"file":"spawnin.wav","version":1,"size":79393,"properties":{}}],"music":[{"file":"8bit_space.mp3","version":1,"size":4557479,"properties":{}}]};
+var graphics = "M1";
+
+</script><script type="text/javascript">var orientation = 'any' ;
+var aspect = 'free' ;
+var ms_libs = [] ;
+window.skip_service_worker = true;
+window.exported_project = true;
+window.ms_use_server = false ;
+</script><script src="compiler.js"></script><script src="parser.js"></script><script src="processor.js"></script><script src="program.js"></script><script src="routine.js"></script><script src="runner.js"></script><script src="token.js"></script><script src="tokenizer.js"></script><script src="transpiler.js"></script><script src="microengine.js"></script></body><script type="text/javascript">//
+//
+// The game is started with the code below.
+// Once you have received the "started" signal (see below),
+// you can do the following:
+// 1) Inject functions or objects into the global context of the microStudio engine, example:
+//
+//   window.player.setGlobal("special_callback",function(x) { console.info(x) }) ;
+//   // Your microScript code can now call the "special_callback" function
+//
+// 2) Call microScript global functions from your JavaScript code, example:
+//
+//   window.player.call("call_me_from_javascript",[10,1000]) ;
+//   // arguments to the function call are provided as an array
+//
+// 3) Run a microScript code snippet from your JavaScript code, example:
+//
+//   window.player.exec("player.position_x = 50",function(result) { console.log(result) ; }) ;
+//
+
+window.addEventListener("load",function() {
+  window.player = new Player(function(event) {
+    if (event.name == "started") {
+      // signal that the game is started
+    }
+    else if (event.name == "log") {
+      // console.info(event.data) ;
+    }
+  }) ;
+  document.body.focus() ;
+}) ;
+
+</script><script id="code" type="text/x-microscript">
+
+
+function()
+//Rectangle collisions
+CheckCollisions = function(o1,o2)
+  return (o1.x + o1.width > o2.x) and (o1.x < o2.x + o2.width) and (o1.y + o1.width > o2.y) and (o1.y < o2.y + o2.width)
+end
+//Distance and circle collisions
+dis = function(o1,o2)
+  local a = o1.x - o2.x
+  local b = o1.y - o2.y
+  local c = sqrt(pow(a,2) + pow(b,2))
+  
+  return c
+end
+//point too something
+point2 = function(x1,y1,x2,y2)
+  return atan2d(y1-y2,x1-x2)
+end
+//Takes an angle and splits it into a vector
+angleToVector = function(angle)
+  return [cosd(angle), sind(angle)]
+end
+//Leaner interpolation
+lerp = function(a,b,x)
+  a+(b-a)*x
+end
+//Random int in a range
+random.intInRange = function(MIN,MAX)
+  return floor(random.next() * (floor(MAX) - ceil(MIN) + 1) + ceil(MIN))
+end
+//Mouse collisions for buttons 
+HoverMouse = function(x, y, width, height)
+  local hover = true
+  if mouse.x < (x - width/2) then hover = false end
+  if mouse.x > (x + width/2) then hover = false end
+  if mouse.y < (y - height/2) then hover = false end
+  if mouse.y > (y + height/2) then hover = false end
+  return hover
+end
+//Spits out a -1 if the given value is negative and the opossite if possitive
+sign = function(a)
+  if a < 0 then
+    return -1
+  elsif a > 0 then
+    return 1
+  end
+  return 0
+end
+//Clamps a value in borders
+clamp = function(value, lower_limit, upper_limit)
+  if lower_limit > upper_limit then
+    local old_lower_limit = lower_limit
+    lower_limit = upper_limit
+    upper_limit = old_lower_limit
+  end
+  local val = max(value, lower_limit)
+  val = min(val, upper_limit)
+  return val
+end
+//An Easy way to play sound :)
+PlaySound = function(name)
+  local sound = audio.playSound(name)
+  sound.setVolume(0.5)
+end
+//If the number is even the true else false
+Even = function(num)
+  if num%2 == 0 then
+    return true
+  else
+    return false
+  end
+end
+//My 3x + 1 project in one function :D
+3x1 = function(num)
+  local num = num
+  if num%2 == 0 then
+    num /= 2
+  else
+    num = num * 3 + 1
+  end
+  return num
+end
+// AABB Collisions (Thanks this_name_is_taken for help with this) 
+AABB = function(a,b)
+  if abs(a.x-b.x)<(a.width+b.width)/2 and
+     abs(a.y-b.y)<(a.height+b.height)/2 then
+     return true 
+  else
+    return false
+  end
+end
+//Squash tween with Quick
+Squash = function()
+  if player.grounded then
+    player.width = lerp(player.width,17,.2)
+    after 500 milliseconds do
+      player.width = lerp(player.width,14,.2)
+    end
+  end
+end
+end()
+
+
+
+function()
+
+UI = function()
+  screen.setFont("SquareWave")
+  screen.drawText(Coins,160,90,13,"rgb(0,2,2)")
+  screen.drawSprite("objects/coin",180,90,16,16)
+  screen.drawText("Objective  Get home | Level: "+level,0,90,11,"rgb(43,38,29)")
+  if isDashing == true then
+    screen.drawText("Dashes remaining:" + DashPerLevel,130,90,12,"rgb(255,57,57)")
+  end
+end
+//restart screen
+GameOver = function()
+  screen.setRadialGradient(0,0,100,"rgb(22,80,197)","rgb(12,43,105)")
+  screen.clear("")
+  screen.setFont("SquareWave")
+  screen.drawText("Game Over",0,30,50,"rgb(87,124,197)")
+  screen.drawText("To restart: press R/r | Get home safely!",0,-20,20)
+
+  if keyboard.press.R then
+    gameOver = 0
+    if coins.length <= 0 then
+      Coins = -2
+    elsif coins.length == 1 then
+      Coins -= 1
+    end
+    init()
+  end
+end
+//outro screen
+Win = function()
+  screen.setRadialGradient(0,0,100,"rgb(85,142,255)","rgb(142,217,255)")
+  screen.clear("")
+  screen.drawMap("bg",0,0,500,300)
+  screen.setFont("SquareWave")
+  screen.drawText("You Won",0,30,50,"rgb(81,49,147)")
+  screen.drawText("Thank you for playing | Fallen",0,-20,20)
+  
+  screen.drawText(Coins,0,-50,20)
+  screen.drawSprite("objects/coin",-25,-50,16)
+end
+end()
+
+
+
+function()
+LevelInit = function()
+  portals = map.extractSprites("objects/portal")
+  coins = map.extractSprites("objects/coin")
+  spawnpoints = map.extractSprites("objects/spawnpoint")
+  falling = map.extractSprites("tiles/tile_falling")
+  
+  for f in falling
+    f.solid = 1
+    f.fixed = 1
+  end
+  
+  for c in coins
+    c.width = 7
+    c.height = 7
+    c.solid = 0
+    c.fixed = 1
+  end
+  
+  for p in portals
+    p.solid = 0
+    p.fixed = 1
+  end
+  
+  for s in spawnpoints
+    s.solid = 0
+    s.fixed = 1
+  end
+end
+
+LevelUpdate = function()
+  if Coins < 0 then
+    Coins = 0
+  end
+  for p in portals
+    if Quick.spriteCollision(player,p) then
+      if level != 12 then
+        level += 1
+        local new_level = audio.playSound("new_level",.5)
+        init()
+      else
+        win = 1
+      end
+    end
+  end
+  
+  for c in coins
+    if Quick.spriteCollision(player,c) then
+      Coins += 1
+      local pickup = audio.playSound("pickup",.5)
+      coins.removeElement(c)
+      Quick.remove(c)
+    end
+  end
+  
+  for f in falling
+    if Quick.spriteCollision(player,f) then
+      f.fixed = 0
+      f.solid = 0
+      player.jumps = 2
+    end
+  end
+end
+end()
+
+
+
+function()
+// Quick Engine version 1.1
+// https://microstudio.dev/i/gilles/quickengine/
+
+Quick = if Quick then Quick else object end end
+
+Quick.init = function()
+  background ="rgb(57,189,255)"
+  objects = []
+  psprites = []
+  sprites = []
+  maps = []
+  gravity = 9.8
+  friction = 1
+  contact_friction = 50
+  ground = -500
+  grid = []
+  fps = 60
+  avg_dt = 16
+  last_draw = 0
+  tick = 0
+  camera = object
+    x = 0
+    y = 0
+    zoom = 1
+    move = function(px,py)
+      target = px or py
+      target_x = px
+      target_y = py
+    end
+  end
+end
+
+Quick.update = function()
+  tick += 1
+  //if tick%2 == 0 then return end
+  for s in sprites
+    if s.physics and s.fall and not s.fixed then
+      s.ay -= gravity*10
+    end
+  end
+  
+  for s in sprites
+    if not s.fixed then
+      s.vx += s.ax/60
+      s.vy += s.ay/60
+      
+      s.contactx = 0
+      s.contacty = 0
+      
+      s.ax = 0
+      s.ay = 0
+    end
+  end
+  
+  for s in sprites
+    s.grounded = 0
+    
+    if s.solid then
+      local dy = s.y-s.height/2-ground
+      if dy<0 then
+        s.vy -= dy*30
+        s.vy *= .5
+        s.grounded = 1
+      end
+    end
+  end
+  
+  for i=0 to sprites.length-2 by 1
+    local s1 = sprites[i]
+    local s2 = sprites[i+1]
+    if s1.x+s1.y-s2.x-s2.y<0 then
+      sprites[i] = s2
+      sprites[i+1] = s1
+    end
+  end
+  
+  for s in sprites
+    for m in maps
+      spriteMapCollision(s,m)
+    end
+  end
+  
+  for i=0 to sprites.length-2 by 1
+    local s1 = sprites[i]
+    
+    if not s1.solid then continue end
+    
+    for j=i+1 to min(i+10,sprites.length-1) by 1
+      local s2 = sprites[j]
+      
+      if not s2.solid then continue end
+      
+      local s1x = s1.x+s1.vx/60
+      local s1y = s1.y+s1.vy/60
+      local s2x = s2.x+s2.vx/60
+      local s2y = s2.y+s2.vy/60
+      
+      local dx = abs(s2x-s1x)
+      local dy = abs(s2y-s1y)
+      
+      dx -= (s1.width+s2.width)/2
+      dy -= (s1.height+s2.height)/2
+
+      if dx<0 and dy<0 then
+        if dx>dy then
+          if s2.x>s1.x then
+            s2.vx -= dx*30
+            s1.vx += dx*30
+          else
+            s2.vx += dx*30
+            s1.vx -= dx*30
+          end
+          local dvy = s2.vy-s1.vy
+          s2.vy -= dvy*.1
+          s1.vy += dvy*.1
+          local dvx = s2.vx-s1.vx
+          s2.vx -= dvx*.1
+          s1.vx += dvx*.1
+        else
+          if s2.y>s1.y then
+            s2.vy -= dy*30
+            s1.vy += dy*30
+            s2.grounded = 1
+          else
+            s2.vy += dy*30
+            s1.vy -= dy*30
+            s1.grounded = 1
+          end
+          local dvx = s2.vx-s1.vx
+          s2.vx -= dvx*.1
+          s1.vx += dvx*.1
+          local dvy = s2.vy-s1.vy
+          s2.vy -= dvy*.1
+          s1.vy += dvy*.1
+        end
+      end
+     end
+  end
+  
+  for s in sprites
+    if s.solid then
+    end
+  end
+  
+  positionUpdate()
+  position_updated = 1
+  
+  // friction
+  for s in sprites
+    if not s.fixed then
+      local f = max(0,min(1,1-friction*.01))
+
+      s.vx *= f
+      s.vy *= f
+    end
+  end
+  
+end
+
+Quick.positionUpdate = function()
+  for s in sprites
+    if not s.fixed then
+      s.x += s.vx/fps
+      s.y += s.vy/fps
+    end
+  end
+
+  local r = .05*60/fps
+  
+  if camera.target then
+    camera.x += (camera.target_x-camera.x)*r
+    camera.y += (camera.target_y-camera.y)*r
+  end
+end
+
+Quick.draw = function()
+  local time = system.time()
+  if last_time then
+    local dt = time-last_time
+    if dt<100 and dt>0 then
+      if tick<60 then
+        avg_dt = max(1,avg_dt*.9+dt*.1)
+      else
+        avg_dt = max(1,avg_dt*.999+dt*.001)
+      end
+      fps = max(60,1000/avg_dt)
+    end
+  end
+  
+  last_time = time
+  
+  if not position_updated then
+    positionUpdate()
+  end
+  
+  position_updated = 0
+  
+  if background then
+    screen.fillRect(0,0,screen.width,screen.height,background)
+  end
+  local angle = random.next()*PI*2
+  local cx = camera.x+camera.shake*sin(angle)
+  local cy = camera.y+camera.shake*cos(angle)
+  local zoom = camera.zoom
+  for o in objects
+    if not o.display then continue end
+    if o.object_type == "sprite" then
+      if o.hflip then screen.setDrawScale(-1,1) end
+      if o.vflip then screen.setDrawScale(1,-1) end
+      if o.hflip and o.vflip then screen.setDrawScale(-1,-1) end
+      if o.rotation then
+        screen.setDrawRotation(o.rotation)
+        screen.drawSprite(o.name,(o.x-cx)*zoom,(o.y-cy)*zoom,o.width*zoom,o.height*zoom)
+        screen.setDrawRotation(0)
+      else
+        screen.drawSprite(o.name,(o.x-cx)*zoom,(o.y-cy)*zoom,o.width*zoom,o.height*zoom)
+      end
+      screen.setDrawScale(1,1)
+    elsif o.object_type == "map" then
+      screen.drawMap(o.map,(o.x-cx)*zoom,(o.y-cy)*zoom,o.width*zoom,o.height*zoom)
+    elsif o.object_type == "text" then
+      screen.drawText(o.text,(o.x-cx)*zoom,(o.y-cy)*zoom,o.height*zoom,o.color)
+    end
+  end
+  
+  return
+end
+
+Quick.addSprite = function(name,x,y,width,height)
+  width = if width then width else 20 end
+  height = if height then height else width end
+
+  local sprite = object
+    object_type = "sprite"
+    name = name
+    x = x
+    y = y
+    vx = 0
+    vy = 0
+    width = width
+    height = height
+    mass = 1
+    fall = 1
+    friction = -1
+    fixed = 0
+    display = 1
+    physics = 1
+    solid = 1
+    bounciness = 0
+    contact_friction = 1
+  end
+  
+  sprites.push(sprite)
+  objects.push(sprite)
+  
+  return sprite
+end
+
+Quick.addMap = function(name,x,y,width,height)
+  width = if width then width else 100 end
+  height = if height then height else width end
+
+  local map = object
+    object_type = "map"
+    name = name
+    x = x
+    y = y
+    map = global.maps[name]
+    
+    width = width
+    height = height
+    display = 1
+    physics = 1
+    solid = 1
+    hollow = object end
+  
+    setHollow = function(name)
+      hollow[name] = 1
+    end
+    
+    setSolid = function(name)
+      hollow[name] = 0
+    end
+    
+    extractSprites = function(name)
+      local list = []
+      local blockw = width/map.width
+      local blockh = height/map.height
+      local ox = x-width/2
+      local oy = y-height/2
+      local m = map.clone()
+      map = m
+      for i=0 to m.width-1
+        for j=0 to m.height-1
+          if m.get(i,j) == name then
+            m.set(i,j,0)
+            local s = Quick.addSprite(name,ox+(i+.5)*blockw,oy+(j+.5)*blockh,blockw,blockh)
+            
+            list.push(s)
+          end
+        end
+      end
+      
+      m.update()
+      
+      list
+    end
+  end
+  
+  maps.push(map)
+  objects.push(map)
+  return map
+end
+
+Quick.isMapCellSolid = function(m,x,y)
+  local cell = m.map.get(x,y)
+  cell and not m.hollow[cell.split(":")[0]]
+end
+
+Quick.spriteMapCollision = function(s,m)
+
+  if m.solid and s.solid then
+    local x1 = s.x-s.width*.5
+    local x2 = s.x+s.width*.5
+    local y1 = s.y-s.height*.5
+    local y2 = s.y+s.height*.5
+    local cx1 = floor((x1-m.x+m.width/2)/m.width*m.map.width)
+    local cx2 = floor((x2-m.x+m.width/2)/m.width*m.map.width)
+    local cy1 = floor((y1-m.y+m.height/2)/m.height*m.map.height)
+    local cy2 = floor((y2-m.y+m.height/2)/m.height*m.map.height)
+    
+    local scx1 = floor((s.x-s.width*.3-m.x+m.width/2)/m.width*m.map.width)
+    local scx2 = floor((s.x+s.width*.3-m.x+m.width/2)/m.width*m.map.width)
+    local scy1 = floor((s.y-s.height*.3-m.y+m.height/2)/m.height*m.map.height)
+    local scy2 = floor((s.y+s.height*.3-m.y+m.height/2)/m.height*m.map.height)
+
+    for i=scx1 to scx2
+      if s.vy<=0 then
+        if isMapCellSolid(m,i,cy1) and not isMapCellSolid(m,i,cy1+1) then
+          s.vy = 0
+          s.y = m.y-m.height*.5+(cy1+1)*m.height/m.map.height+s.height/2-.01
+          s.grounded = 1
+          break
+        end
+      elsif s.vy>0 then
+        if isMapCellSolid(m,i,cy2) and not isMapCellSolid(m,i,cy2-1) then
+          s.vy = 0
+          s.y = m.y-m.height*.5+cy2*m.height/m.map.height-s.height/2
+          break
+        end
+      end
+    end
+    
+    for i=scy1 to scy2
+      if s.vx<0 then
+        if isMapCellSolid(m,cx1,i) and not isMapCellSolid(m,cx1+1,i) then
+          s.vx = 0
+          s.x = m.x-m.width*.5+(cx1+1)*m.width/m.map.width+s.width/2
+          break
+        end
+      end
+      if s.vx>0 then
+        if isMapCellSolid(m,cx2,i) and not isMapCellSolid(m,cx2-1,i) then
+          s.vx = 0
+          s.x = m.x-m.width*.5+cx2*m.width/m.map.width-s.width/2
+          break
+        end
+      end
+    end
+  end
+end
+
+Quick.mapCellAt = function(map,x,y)
+  local blockw = map.width/map.map.width
+  local blockh = map.height/map.map.height
+  local cx = floor((x-(map.x-map.width/2))/blockw)
+  local cy = floor((y-(map.y-map.height/2))/blockh)
+  return map.map.get(cx,cy)
+end
+
+Quick.mapCollision = function(sprite,map)
+  local blockw = map.width/map.map.width
+  local blockh = map.height/map.map.height
+  local cx = floor((sprite.x-(map.x-map.width/2))/blockw)
+  local cy = floor((sprite.y-(map.y-map.height/2))/blockh)
+  return map.map.get(cx,cy)
+end
+
+Quick.spriteCollision = function(s1,s2)
+  max(0,min((s1.width+s2.width)/2-abs(s1.x-s2.x),(s1.height+s2.height)/2-abs(s1.y-s2.y)))
+end
+
+Quick.addText = function(text,x,y,height=10)
+  local t = object
+    object_type = "text"
+    text = text
+    x = x
+    y = y
+    display = 1
+    height = height
+    font = "BitCell"
+    color = "rgb(255,255,255)"
+  end
+  
+  objects.push(t)
+  return t
+end
+
+Quick.remove = function(o)
+  if o.object_type == "sprite" then
+    local index = sprites.indexOf(o)
+    if index>=0 then sprites.remove(index) end
+  end
+  local index = objects.indexOf(o)
+  if index>=0 then objects.remove(index) end
+end
+
+Quick.createGroup = function()
+  object
+  end
+end
+
+end()
+
+
+
+function()
+init = function()
+  Quick.init()
+  Quick.gravity = 70
+  Quick.friction = 6
+  Quick.ground = -500
+  Quick.camera.zoom = 1.2
+  
+  
+  local spawnin = audio.playSound("spawnin",.5,1)
+  
+  delta = 1000/system.fps
+  
+  if level == 0 then
+    level = 1
+  end
+  
+  if Coins == 0 then
+    Coins = 0
+  end
+  
+  bg = Quick.addMap("bg",0,0,screen.width,screen.height)
+  bg.solid = 0
+  
+  win = 0
+  
+  map = Quick.addMap('map'+level,0,0,300,180)
+  LevelInit()
+  
+  for s in spawnpoints
+    player = Quick.addSprite("player",s.x,s.y,25,25)
+  end
+  PlayerInit()
+end
+
+update = function()
+  if gameOver == 0 or win == 0 then
+    local music = audio.playMusic("8bit_space",.5)
+    Quick.update()
+  
+    LevelUpdate()
+    PlayerUpdate()
+    particles.update()
+  end
+end
+
+draw = function()
+  if gameOver == 0 then
+    Quick.draw()
+    particles.draw()
+    UI()
+  else
+    GameOver()
+  end
+  if win == 1 then
+    Win()
+  end
+end
+end()
+
+
+
+function()
+// Music from #Uppbeat (free for Creators!):
+//https://uppbeat.io/t/michael-grubb/floating-cat
+//License code: B9RMVZOGY8IDGB8G 
+
+//Sprites - Made by DM1234
+//Sound FX - Made by DM1234 - With JSFXR 8 BIT SOUND MAKER
+
+
+// Note: Not all things used in this are made by me, i used 2 sprites from the internet, for the background sky. Etc.
+
+
+//Game Author - Diya
+end()
+
+
+
+function()
+particles = object
+  list = []
+  index = 0
+  
+  add = function(name,x,y)
+    list[index] = object
+      name = name
+      x = x
+      y = y
+      vx = (random.next()-.5)*.2
+      vy = (random.next()-.5)*.2
+      opacity = 1
+      size = 8+random.next()*3
+    end
+    index = (index+1)%30
+  end
+  
+  update = function()
+    for p in list
+      p.x += p.vx
+      p.y += p.vy
+      p.opacity -= .02
+    end
+  end
+  
+  draw = function()
+    for p in list
+      if p.opacity>0 then
+        screen.setAlpha(p.opacity)
+        screen.drawSprite(p.name,p.x-Quick.camera.x,p.y-Quick.camera.y,p.size,p.size)
+        screen.setAlpha(1)
+      end
+    end
+  end
+end
+
+end()
+
+
+
+function()
+PlayerInit = function()
+  speed = 20
+  JumpForce = 350
+  
+  jumps = 2
+  
+  dash_power = 100
+  
+  DashPerLevel = 2
+  
+  isMoving = false
+  isDashing = false
+  
+  local noDash = every 3 seconds do
+    if isDashing == true then
+      isDashing = false
+    end
+  end
+end
+
+Death = function()
+  if player.y <= -200 then
+    gameOver = 1
+  end
+end
+
+Borders = function()
+  local r = 150
+  
+  player.x = clamp(player.x,-r,r)
+end
+
+Rotation = function()
+  if isMoving then
+    player.rotation = lerp(player.rotation,15*sign(-player.vx),.2)
+  else
+    player.rotation = lerp(player.rotation,0,1)
+  end
+end
+
+Dash = function()
+  local input_x = keyboard.RIGHT - keyboard.LEFT
+  if keyboard.press.E and input_x != 0 and DashPerLevel != 0 then
+    player.vx += input_x * dash_power * delta
+    DashPerLevel -= 1
+    isDashing = true
+  end
+end
+
+Movement = function()
+  Rotation()
+  local input_x = keyboard.RIGHT - keyboard.LEFT
+  
+  if input_x != 0 then
+    if player.vx < 0 then player.hflip = 1 else player.hflip = 0 end
+    player.vx = lerp(0,speed,.2) * input_x * delta
+    player.name = "player/player_run"
+    isMoving = true
+  else
+    player.vx = lerp(player.vx,0,.2)
+    player.name = "player/player_idle"
+    isMoving = false
+  end
+  
+  if player.grounded then
+    jumps = 2
+  end
+  
+  if keyboard.press.SPACE and jumps > 0 then
+    jumps -= 1
+    player.vy += JumpForce
+    for i=0 to 5 by 1
+      particles.add("objects/smoklet",player.x,player.y-5)
+    end
+    local jump = audio.playSound("jump",.5)
+  end
+  
+  if player.grounded == false and jumps >= 1 then
+    player.name = "player/player_jump"
+  elsif player.grounded == false and jumps <= 0 then
+    player.name = "player/player_double_jump"
+  end
+end
+
+PlayerUpdate = function()
+  Movement()
+  Death()
+  Dash()
+  Borders()
+end
+end()
+
+
+</script></html>
